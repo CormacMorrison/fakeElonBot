@@ -8,7 +8,7 @@ if ! python3 -m venv --help > /dev/null 2>&1; then
     echo "'venv' module installed."
 fi
 # Check if virtual environment directory exists
-if [ ! -d "$VENV_DIR" ]; then
+if [ ! -f "$VENV_DIR/pyvenv.cfg" ]; then
     echo "Virtual environment not found, creating one..."
     
     # Create virtual environment
